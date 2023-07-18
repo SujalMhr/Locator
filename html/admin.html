@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/style2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>LocatoR - Admin</title>
+  </head>
+
+  <body style="overflow-y: scroll">
+    <nav class="navbar">
+      <div class="container flex">
+        <div class="left">
+          <a href="../php/index.php"
+            ><img src="../images/img.jpg" alt="" srcset=""
+          /></a>
+        </div>
+
+        <div class="right">
+          <ul class="flex">
+            <li id="home">Home</li>
+            <li id="services">
+              Services
+              <div class="dropdown">
+                <a href="../html/register.html">Register</a>
+                <a href="../html/admin.html">Admin</a>
+                <a href="">Feedback</a>
+            </div>
+            </li>
+            <li id="about" data-open="#aboutContent">About</li>
+            <li id="support" data-open="#supportContent">Support</li>
+            <li id="contact" data-open="#contactContent">Contact</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="pop1">
+      <div id="aboutContent" class="pop">
+        <h2
+          style="
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 5px;
+            border-bottom: 1px solid black;
+          "
+        >
+          About LocatoR
+        </h2>
+        <div class="aboutInsideContent">
+          <!-- <i class="fa-regular fa-circle-xmark fa-lg closeBtn" data-close></i> -->
+          <p>Created On: 1st May - 18th May <br /></p>
+          <p>
+            Team Members: <br />
+            <a href="">Ram</a>,
+            <a href="">Fulmaya</a>
+          </p>
+        </div>
+      </div>
+      <div id="overlay" class="pop"></div>
+    </div>
+
+    <div id="pop2">
+      <div id="supportContent" class="pop">
+        <h2
+          style="
+            font-weight: 500;
+            margin-bottom: 5px;
+            border-bottom: 1px solid black;
+          "
+        >
+          Support Center
+        </h2>
+        <!-- <i class="fa-regular fa-circle-xmark fa-lg closeBtn" data-close></i> -->
+        <div class="supportInsideContent">
+          <img id="supportImg" src="../images/support_100.jpg" alt="" />
+          <p>
+            Leave us your queries below <br />
+            <a
+              href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDZBLBjtWkJvVdGNnTxWNvVsjHWWNmfvFDRvZbCgdKJvhRBXcdZBCsJRHbzjthqpMQlQnvW"
+              >fulmaya.mrzn@gmail.com</a
+            ><br />
+            Or call us at <br />
+            <a href="" style="text-decoration: none">+977-9840510225</a>
+          </p>
+          <p>We will be happy to help you.</p>
+        </div>
+      </div>
+      <div id="overlay" class="pop"></div>
+    </div>
+
+    <div id="pop3">
+      <div id="contactContent" class="pop">
+        <h2
+          style="
+            font-weight: 500;
+            margin-bottom: 5px;
+            border-bottom: 1px solid black;
+          "
+        >
+          Contact
+        </h2>
+        <!-- <i class="fa-regular fa-circle-xmark fa-lg closeBtn" data-close></i> -->
+        <div class="contactInsideContent">
+          <p>
+            <!-- <i class="fa fa-location-dot"></i> -->
+
+            Address: <br />
+            Kirtipur-05, Kathmandu, Nepal <br />
+          </p>
+          <p>
+            <!-- <i class="fa fa-phone"></i> -->
+            Phone: <br />
+            +977-9840510225 <br />
+            +977-9840510225 <br />
+            +977-9840510225 <br />
+          </p>
+          <p>
+            <!-- <i class="fa fa-envelope"></i> -->
+            Email: <br />
+            <a href="">fulmaya.mrzn@gmail.com</a> <br />
+            <a href="">fulmaya.mrzn@gmail.com</a> <br />
+            <a href="">fulmaya.mrzn@gmail.com</a> <br />
+          </p>
+          <div class="connect">
+            Connect with us:<br />
+            <a href=""
+              ><i
+                class="fa-brands fa-facebook fa-lg"
+                style="padding: 2px 5px; color: black"
+              ></i
+            ></a>
+            <a href=""
+              ><i
+                class="fa-brands fa-twitter fa-lg"
+                style="padding: 2px 5px; color: black"
+              ></i
+            ></a>
+            <a href=""
+              ><i
+                class="fa-brands fa-linkedin fa-lg"
+                style="padding: 2px 5px; color: black"
+              ></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div id="overlay" class="pop"></div>
+    </div>
+
+    <div id="docContainer">
+      <div class="a_head">
+        <h2 style="font-weight: 500">Our Admins</h2>
+      </div>
+      <div class="a_body">
+        <div class="docList">
+          <div class="doc" id="doc">
+            <div class="docImg" id="image">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeLJnzgcw-0NEcuH0joPa1I_-MCWg-yJ_v1FrDzT8&s"
+                alt=""
+              />
+            </div>
+            <div class="docInfo">
+              <h3 id="name">Ram Shahi</h3>
+              <p class="edu">BCA</p>
+              <p class="speciality">Product Manager</p>
+              <p class="experience">5+ years of experience</p>
+              <p class="availability">9:00 AM to 5:00 PM (Tue,Thu)</p>
+            </div>
+            <div class="book"><button>Request Assistance</button></div>
+          </div>
+
+          <div class="doc">
+            <div class="docImg" id="image">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeLJnzgcw-0NEcuH0joPa1I_-MCWg-yJ_v1FrDzT8&s"
+                alt=""
+              />
+            </div>
+            <div class="docInfo">
+              <h3 id="name">Fulmaya Maharjan</h3>
+              <p class="edu">BIT</p>
+              <p class="speciality">Developer</p>
+              <p class="experience">10 years of experience</p>
+              <p class="availability">9:00 AM to 5:00 PM (Tue,Thu)</p>
+            </div>
+            <div class="book"><button>Request Assistance</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <!-- <script src="doc.js"></script> -->
+    <script
+      src="https://kit.fontawesome.com/e87b42cfc1.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
