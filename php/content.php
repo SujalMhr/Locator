@@ -15,9 +15,9 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <!-- <link rel="stylesheet" href="../css/style.css" /> -->
     <!-- <link rel="stylesheet" href="../css/style2.css" /> -->
-    <link rel="stylesheet" href="../css/content.css" />
+    <link rel="stylesheet" href="../css/get-started.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,7 +27,7 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
 </head>
 
 <body style="overflow-y: scroll">
-    <?php require '../components/nav.html' ?>
+        <?php require '../components/nav.html'?>
 
     <div class="content">
         <form method="GET">

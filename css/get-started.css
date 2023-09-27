@@ -1,0 +1,38 @@
+.destinations {
+  display: flex;
+  margin: 15px 11rem;
+  /* border: 1px solid black; */
+  /* padding: 10px; */
+}
+
+.destinations a {
+  text-decoration: none;
+  color: black;
+}
+.destinations a:hover {
+  text-decoration: none;
+  color: blue;
+}
+
+.content-image img {
+  height: 12rem;
+  width: 20rem;
+}
+
+.text {
+  margin: 0 15px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 11rem;
+}
+
+#search {
+  height: 35px;
+  width: 15rem;
+  border-radius: 5px;
+  border: 1px solid grey;
+}

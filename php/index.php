@@ -45,7 +45,6 @@ if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
                     </li>
                     <li id="about" data-open="#aboutContent">About</li>
                     <li id="support" data-open="#supportContent">Support</li>
-                    <li id="contact" data-open="#contactContent">Contact</li>
                 </ul>
             </div>
         </div>
@@ -178,7 +177,7 @@ LocatoR is a short form for Location Review. As its name suggests, this applicat
 
     <div class="container4 border">
 
-        <a href="../html/register.html" style="text-decoration: none; color: black">
+        <a href="../php/events2.php" style="text-decoration: none; color: black">
             <div class="minicontainer border">
                 <!-- <i class="fa-solid fa-calendar-check fa-2xl"></i> -->
                 <h3 style="font-weight: 500">Upcoming Events</h3>
@@ -193,18 +192,6 @@ LocatoR is a short form for Location Review. As its name suggests, this applicat
             <div class="minicontainer border">
                 <!-- <i class="fa-solid fa-user-doctor fa-2xl"></i> -->
                 <h3 style="font-weight: 500">Top Locations</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-                    repellat quae maxime saepe repellendus soluta ducimus necessitatibus
-                    asperiores sit esse?
-                </p>
-            </div>
-        </a>
-
-        <a href="register.html" style="text-decoration: none; color: black">
-            <div class="minicontainer border">
-                <!-- <i class="fa-regular fa-books-medical"></i>"> -->
-                <h3 style="font-weight: 500">Historical Records</h3>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
                     repellat quae maxime saepe repellendus soluta ducimus necessitatibus

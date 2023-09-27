@@ -238,7 +238,7 @@
 }
 
 .container2 {
-  background-color: #4D3C35;
+  background-color: #4d3c35;
   /* background: url("https://cdn.vectorstock.com/i/preview-1x/65/20/kathmandu-nepal-skyline-detailed-silhouette-vector-3386520.jpg"); */
   /* background-repeat: no-repeat; */
   height: 400px;
@@ -304,7 +304,7 @@
 }
 
 .container4 {
-  background: #4D3C35;
+  background: #4d3c35;
   height: 45rem;
   display: flex;
   justify-content: space-between;
@@ -317,8 +317,8 @@
 
 .container4 .minicontainer {
   /* display: block; */
-  height: 290px;
-  background: #F1E3D8;
+  height: 270px;
+  background: #fbf7f4;
   width: 445px;
   padding: 40px 50px;
   border-radius: 10px;
@@ -431,7 +431,7 @@ i {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: #fff;
   border: none;
   border-radius: 4px;

@@ -1,5 +1,5 @@
 .appointmentContainer {
-  background-color: #F1E3D8;
+  background-color: #f1e3d8;
 }
 
 .a_body {
@@ -54,15 +54,14 @@ select {
 /* ---------------------------------- */
 
 #docContainer {
-  background:#F1E3D8;
-  height: 100rem;
+  background: #f1e3d8;
+  height: 110rem;
   /* display: flex;
   justify-content: center; */
 }
 
 .docList {
   width: 40rem;
-  height: 50rem;
   max-height: 150rem;
   padding: 10px 40px;
   background-color: white;
