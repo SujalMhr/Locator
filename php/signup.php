@@ -6,13 +6,14 @@
         $email = $_POST["em"];
         $password = $_POST["pw"];
         $cpassword = $_POST["cpw"];
+        $username=$_POST["un"];
  
       
-            if(!empty($password) && !empty($email) && $password == $cpassword){
-                $sql = "INSERT INTO `users` (`email`, `password`) VALUES ('$email', '$password')";
+            if(!empty($password) && !empty($email) && !empty($username) && $password == $cpassword){
+                $sql = "INSERT INTO `users` (`username`, `email`, `password`) VALUES ('$username', '$email', '$password')";
                 $result = mysqli_query($con, $sql);
                 $showAlert = "Signed up successfully.";
-            }else if(empty($password) || empty($cpassword) || empty($email)){
+            }else if(empty($username) || empty($password) || empty($cpassword) || empty($email)){
                 $showError = "Please fill out all the fields";
             }else if($password != $cpassword){
                 $showError = "Passwords do not match";
@@ -48,6 +49,10 @@
                 </div>
 
                 <div id="bod">
+                    <div class="inp">
+                        <label for="username">Username</label> <br>
+                        <input type="text" name="un" id="un">
+                    </div>
                     <div class="inp">
                         <label for="email">Email:</label> <br>
                         <input type="email" name="em" id="em">

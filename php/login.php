@@ -9,12 +9,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_query($con, $sql);
     $num = mysqli_num_rows($result);
     // echo $num;
+    $sqle = "SELECT * FROM users WHERE email like '$email'";
+    $lol = mysqli_query($con, $sqle);
+    $row=mysqli_fetch_array($lol);
 
     if($num>0){
-    session_start();
-    $_SESSION['loggedin'] = true;
-    $_SESSION['email'] = $email;
-    header("location: index.php");
+        if($email=="progress@hotman.com"){
+            session_start();
+            $_SESSION['loggedin'] = true;
+            $_SESSION['userid'] = $row['userid'];
+            header("location: admin.php");
+            }
+        else{
+            session_start();
+            $_SESSION['loggedin'] = true;
+            $_SESSION['userid'] = $row['userid'];
+            header("location: index.php");
+        }
     }
     else{
         $showError="Invalid Credentials";
