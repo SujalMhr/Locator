@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if(isset($_SESSION['loggedin']) || $_SESSION['loggedin']==true){
+    $login=true;
+}else{
+  header("location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +15,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style2.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- <link rel="stylesheet" href="../css/style2.css" /> -->
     <link rel="stylesheet" href="../css/content.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,18 +30,57 @@
     <?php require '../components/nav.html' ?>
 
     <div class="content">
-        <h2>Recommendations</h2>
-        <div class="top">
-            <input type="text" id="search">
-            <button>Search</button>
-        </div>
+        <form method="GET">
+          <div class="top">
+              <input type="text" name="search" value="<?php if(isset($_GET["search"])){echo $_GET["search"];}?>" placeholder="search location" action="" required>
+              <button type="submit" id="popupButton" style="color:red" data-open="#searchBox">Search</button>
+          </div>
+        </form>
     </div>
 
-    
+    <div>
+          <?php
+            include "db_connect.php";
+            if(isset($_GET['search']))
+            {
+              $filtervalues = $_GET['search'];
+              $query = "SELECT * FROM place where placename LIKE '%$filtervalues%'";
+              $result = mysqli_query($con,$query);
+              if(mysqli_num_rows($result)>0)
+              {
+                foreach($result as $items)
+                {
+                  ?>
+                  <div class="destinations">
+                      <a href=<?= $items['html']?> target="_blank">
+                       <div class="content-image">
+                         <img src=<?= $items['pic']?> alt="<?= $items['placename']?>">
+                      </div>
+                      <div class="text">
+                         <h3><?= $items['placename']?></h3>
+                         <p>here you can find brief introduction on <?php echo $items['placename'] ?></p>
+                     </a>
+                    </div>    
+                  </div>
+                  <?php
+                }
+              }
+              else
+              {
+                ?>
+                <h1>NO RECORD FOUND</h1>
+                <?php
+              }
+            }
+          ?>
+    </div>
+    <div class="content">
+        <h2>Recommendations</h2>
+    </div>
     <div class="destinations">
-                <a href="../components/kirtipur.html" target="_blank">
+                <a href="../placeht/kirtipur.php" target="_blank">
                 <div class="content-image">
-                    <img src="../reseach/Kritipur.jpg" alt="">
+                    <img src="../images/Kirtipur.jpg" alt="">
                 </div>
                 <div class="text">
                     <h3>Kirtipur</h3>
@@ -40,9 +90,9 @@
         </div>
 
     <div class="destinations">
-                <a href="../components/kirtipur.html" target="_blank">
+                <a href="../placeht/kirtipur.php" target="_blank">
                 <div class="content-image">
-                    <img src="../reseach/kds.jpg" alt="">
+                    <img src="../images/kds.jpg" alt="">
                 </div>
                 <div class="text">
                     <h3>Kathmandu Durbar Square</h3>
@@ -52,9 +102,9 @@
         </div>
 
     <div class="destinations">
-                <a href="../components/kirtipur.html" target="_blank">
+                <a href="../placeht/kirtipur.php" target="_blank">
                 <div class="content-image">
-                    <img src="../reseach/asan.jpg" alt="">
+                    <img src="../images/asan.jpg" alt="">
                 </div>
                 <div class="text">
                     <h3>Asan</h3>
@@ -62,7 +112,7 @@
                 </a>
                 </div>    
         </div>
-
+    <script src="../js/script2.js"></script>
 </body>
 
 </html>
